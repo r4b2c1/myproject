@@ -29,6 +29,7 @@ body {
     height: 100%;
   }
 
+ 
 
   .wrapper {
     height: auto !important;
@@ -36,7 +37,7 @@ body {
     background-image:url("https://cdn.pixabay.com/photo/2015/01/15/09/21/smoke-600079_960_720.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+   
   
     
     min-height: 100%;
@@ -58,6 +59,9 @@ body {
     margin: 0 auto;
     clear: both;
   }
+.card {
+    background-color: transparent;
+}
 
 .lead {
     text-align: center;
@@ -65,8 +69,6 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:darkgreen	;
 }
-
-
 
 .strains {
     font-family: 'IM Fell English SC', serif;
