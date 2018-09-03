@@ -25,6 +25,7 @@ body {
   
   html,
   body {
+    zoom: 89%;
     height: 100%;
   }
 
@@ -32,6 +33,10 @@ body {
   .wrapper {
     height: auto !important;
     height: 100%;
+    background-image:url("https://cdn.pixabay.com/photo/2015/01/15/09/21/smoke-600079_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
   
     
     min-height: 100%;
@@ -39,6 +44,10 @@ body {
     
     margin: 0 auto -100px;
   }
+ 
+  .jumbotron {
+      background-color: transparent;
+ }
   
   .container {
     
@@ -54,19 +63,15 @@ body {
     text-align: center;
     font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: green;
+    color:darkgreen	;
 }
 
-.jumbotron {
-    background-image:url("https://cdn.pixabay.com/photo/2015/01/15/09/21/smoke-600079_960_720.jpg");
-    opacity: 0.5;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 .strains {
     font-family: 'IM Fell English SC', serif;
     font-size: 80px;
+   
 
 }
 .resturants {
@@ -99,10 +104,10 @@ footer {
   font-size: 12px;
 
   
-  color: black;
+  
   text-align: center;
 
   
-  background:gray ;
-  border-top: 8px solid gray ;
+  background:transparent;
+  border-top: 8px solid transparent ;
 }
