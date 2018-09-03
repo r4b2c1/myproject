@@ -85,9 +85,7 @@ body {
 }
 
 .card {
-    border: 2px solid black;
-    padding: 15px;
-    border-spacing: 10px;
+    background: transparent;   
 }
 
 footer,
