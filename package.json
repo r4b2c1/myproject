@@ -26,6 +26,7 @@
     "request": "^2.88.0",
     "require": "^2.4.20",
     "requirer": "0.0.4",
-    "snmp-native": "^1.1.2"
+    "snmp-native": "^1.1.2",
+    "zomato.js": "^1.1.0"
   }
 }
