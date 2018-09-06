@@ -1,39 +1,20 @@
-$(document).ready(function() 
-{
-    var config = {
-        apiKey: "AIzaSyBdUwUzkwAY6oo002HYGaGW60cg8uo2XL8",
-        authDomain: "stoner-296a6.firebaseapp.com",
-        databaseURL: "https://stoner-296a6.firebaseio.com",
-        projectId: "stoner-296a6",
-        storageBucket: "stoner-296a6.appspot.com",
-        messagingSenderId: "215447558618"
-      };
-      firebase.initializeApp(config);
-    
-    
-    
-    
-    var database = firebase.database();
-    
-    $("#submitBtn").on("click" , function(event)
-    
-    {
-        event.preventDefault();
-        var searchInput = $("#searchInput").val().trim();
-    
-        $("#searchInput").val("");
-    
-        database.ref().push({
-         
-            searchInput: searchInput,
-        });
-    
-    
+$("#submitBtn2").on('click', function(){
+    event.preventDefault();
+    // console.log("test");
+    $.ajax({
+        
+        headers:{
+            "user-key": "faa307d773dcd2b9932eb6a9abf30392",
+            "Accept": "application/json",
+            "Content-type":"application/x-www-form-urlencoded"
+        }, url: "https://developers.zomato.com/api/v2.1/search?entity_type=city&q=%22%20%22&count=10&sort=rating&order=asc",
+           method: `GET`,
+           success:function(response){
+            //    var r=JSON.parse(response);
+            //    $("#append").html(r.base);
+            console.log(response);
+           }
     })
 });
 
 
-
-
-
-   
