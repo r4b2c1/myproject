@@ -32,7 +32,7 @@ $(document).ready(function()
     })
 });
 
-var handlebars = require('handlebars');
+// var handlebars = require('handlebars');
 
 function searchResturants() {
     var queryResturants = 'https://developers.zomato.com/api/v2.1/search?entity_type=city&count=10&cuisines=%22%20%22&sort=rating&order=asc&apiKey=faa307d773dcd2b9932eb6a9abf30392'
@@ -41,8 +41,15 @@ function searchResturants() {
         method: 'GET'
      }).then(function(response){
          console.log(response);
-         $()
-     })
+         $("#city").empty();
+         $("#cuisines").empty();
+        var results = response.resturants;
+        // for( var i = 0 < results.length; i++)
+        // {
+
+        // }
+console.log(results);
+     });
 
 }
 
