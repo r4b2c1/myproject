@@ -1,6 +1,11 @@
 $("#submitBtn2").on('click', function(){
     event.preventDefault();
     // console.log("test");
+    var City = $("#city").val().trim();
+    searchFood(City);
+});
+function searchFood(){
+
     $.ajax({
         
         headers:{
@@ -10,11 +15,18 @@ $("#submitBtn2").on('click', function(){
         }, url: "https://developers.zomato.com/api/v2.1/search?entity_type=city&q=%22%20%22&count=10&sort=rating&order=asc",
            method: `GET`,
            success:function(response){
-            //    var r=JSON.parse(response);
-            //    $("#append").html(r.base);
-            console.log(response);
-           }
+                console.log(response);
+                $('#city').empty();
+                $('#append').empty();
+                console.log(response);
+
+                // var results = response.results;
+            //    for (var i = 0; i < results.length; i++)
+            //         var cardDiv = $('<p>');
+            //         cardDiv.attr('id', 'append');
+            //         $('#append').append(results);
+            //     }
+        //    })
+        }
     })
-});
-
-
+}
