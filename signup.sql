@@ -10,33 +10,47 @@ var connection = mysql.createConnection({
 })
 
 connection.connect(function(err){
-    console.log("connected ass id: "+connection.threadId);
+    console.log("connected as id: " + connection.threadId);
     })
 
-    var sign = function(){
-        inquirer.propmpt([{
+    var questions = [
+        {
+            type: 'input',
+            name: 'full name',
+            message: "what\'s your full name??"
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What\'s your email???"
+        },  
+        {
+            type: 'password',
+            name: 'myPassword',
+            message: "What\'s your password??"
+        },
 
-            name:"name",
-            type: "input",
-            message: "what is your name?"
-        },{
+       
+    ];
 
-            name: "email",
-            type: "input",
-            message: "Your email please?"
-        },{
+    inquirer.prompt(questions).then(function (answers) {
+       
+        console.log(JSON.stringify(answers, null, '    '));
+   
+         console.log(answers.myPassword);
 
-            password: "password",
-            type: "input",
-            message: "Password needed."
-        }
+         if (answers.myPassword == "  "){
+
+              console.log("Your right")
+         }
+
+         else{
+             console.log("wrong password!")
+         }
+
+        
 
 
-
-        }]).then(function(answer){
-            connection.query("Insert INTO input", {
-                name:answer.name,
-                
-            })
-        })
-    }
+         
+    });
+    
